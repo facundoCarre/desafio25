@@ -46,7 +46,7 @@ app.get('/',(req,res)=>{
 
 app.get('/login', (req, res) => {
   let {usuario} =  req.query
-  req.session.usuario
+  req.session.usuario = usuario
   res.render('list', { usuario: usuario});
 })
 
